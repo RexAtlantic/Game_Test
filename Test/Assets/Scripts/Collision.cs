@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Collision : MonoBehaviour
 {
@@ -7,6 +9,9 @@ public class Collision : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    public GameManager gm;
+
+    
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,6 +28,10 @@ public class Collision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        gm.SpawnCircle();
+
         Destroy(collision.gameObject);
+
+     
     }
 }

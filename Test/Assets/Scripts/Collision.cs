@@ -30,6 +30,8 @@ public class Collision : MonoBehaviour
     {
         gm.SpawnCircle();
 
+        gm.score++;
+
         Destroy(collision.gameObject);
 
      

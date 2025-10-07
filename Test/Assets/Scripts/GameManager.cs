@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UIElements;
@@ -13,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     public Vector2 location = new Vector2(0, -9);
 
-    private int score;
+    public int score;
 
     public TextMeshProUGUI text;
 
@@ -26,9 +27,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text "Score: " + score;
+        text.text = "Score: " + score;
 
-        score = Collision.Destroy<circle>;
+       
 
 
     }
